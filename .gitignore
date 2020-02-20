@@ -1,0 +1,10 @@
+node_modules/
+output/
+.vscode/
+
+outputFolder/
+out/
+dist/
+blob-to-png
+test/
+test2/

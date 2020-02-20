@@ -1,0 +1,33 @@
+{
+  "name": "csv-img-extract",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js --",
+    "dev": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "executable": "pkg src/index.js --targets node11-linux-x64",
+    "build-linux": "nexe -i src/index.js -t linux-x64 -o dist/csv-img-extract-linux64",
+    "build-mac": "nexe -i src/index.js -t macos-10.13.0 -o dist/csv-img-extract-mac",
+    "build-win": "nexe -i src/index.js -t win32-x86-10.13.0 -o dist/csv-img-extract-win.exe"
+  },
+  "bin": "src/index.js --",
+  "pkg": {
+    "scripts": "src/**/*.js",
+    "targets": [
+      "node10"
+    ]
+  },
+  "author": "AlexanderSergan",
+  "license": "ISC",
+  "dependencies": {
+    "cli-progress": "^3.6.0",
+    "commander": "^4.1.1",
+    "csvtojson": "^2.0.10",
+    "cyberchef": "^9.12.0"
+  },
+  "devDependencies": {
+    "nexe": "^3.3.2"
+  }
+}
